@@ -26,7 +26,10 @@ def find_non_surjective_element(mapping: dict, target: set):
 def my_floor(x: float) -> int:
     """Return floor(x) without using math.floor."""
     # === TODO ===
-    return int(x)
+    n = int(x) # truncates towards zero
+    if x < n: # negative with decimal, need to go lower
+        return n - 1
+    return n    
     # === END TODO ===
 
 
