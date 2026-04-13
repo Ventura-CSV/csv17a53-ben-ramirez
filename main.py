@@ -16,16 +16,17 @@ def find_non_injective_pair(mapping: dict) -> tuple | None:
 def find_non_surjective_element(mapping: dict, target: set):
     """Return one target element with no input mapping to it, or None if surjective."""
     # === TODO ===
-    # Your code here
-    pass
+    for element in target:
+        if element not in mapping.values(): # not in range
+            return element # found one!
+    return None # all target elements are in the range, so it's surjective
     # === END TODO ===
 
 
 def my_floor(x: float) -> int:
     """Return floor(x) without using math.floor."""
     # === TODO ===
-    # Your code here
-    pass
+    return int(x)
     # === END TODO ===
 
 
